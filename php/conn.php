@@ -1,13 +1,13 @@
 <?php 
 $host = 'localhost';
-$dbname = 'BUTANG DIRI ANG DB NAME';
+$dbname = 'freddie_repairshop';
 $username = 'root';
 $password = '';
 
-$conn = new PDO("mysql:host=$host;dbname=$dbname=;charset=utf8", $user, $password);
+$conn = new mysqli($host, $username, $password, $dbname);
 
-if(!$conn) {
-    die("Connection Failed: Unable to establish database connection.");
+if($conn->connect_error) {
+    die("Connection Failed: " . $conn->connect_error);
 }
 
 
