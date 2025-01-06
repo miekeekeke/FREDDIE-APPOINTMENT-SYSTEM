@@ -34,7 +34,7 @@ class AppointmentCalendar {
         $stmt->execute([$month, $year]);
         $availability = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
 
-        for ($i = 0; $i < $day_of_week; $i++) {
+        for ($i = 0; $i < $days_of_week; $i++) {
             $calendar .= "<div class='calendar-day empty'></div>";
         }
 
@@ -53,7 +53,7 @@ class AppointmentCalendar {
 
             $calendar .= "<div class='$class' data-date='$date'>";
             $calendar .= "<div class='day-number'>$current_day</div>";
-            if ($available && $bookings <class= $this->max_daily_appointments) {
+            if ($available && $bookings < $this->max_daily_appointments) {
                 $slots = $this->max_daily_appointments - $bookings;
                 $calendar .= "<div class='slots-left'>$slots slots left</div>";
             }
