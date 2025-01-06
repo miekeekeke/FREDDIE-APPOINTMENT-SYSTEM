@@ -11,16 +11,10 @@ session_start();
     <title>Index</title>
 </head>
 <body>
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-sm bg-light">
-            <div class="container-fluid">
-                <ul class="navbar nav">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Test</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+    <nav class="navbar navbar-expand-sm bg-dark">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">Freddie's ShoeShop</a>
+        </div>
+    </nav>
 </body>
 </html>
