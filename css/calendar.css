@@ -1,0 +1,114 @@
+/* Main calendar container */
+.calendar-month {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Calendar header (month and year) */
+.calendar-header {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 15px;
+    background-color: #f8f9fa;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Day of week headers */
+.calendar-day-header {
+    text-align: center;
+    font-weight: 600;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+}
+
+/* Individual day cells */
+.calendar-day {
+    padding: 15px;
+    min-height: 120px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for available days */
+.calendar-day:hover:not(.unavailable):not(.full) {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Empty day cells */
+.calendar-day.empty {
+    background-color: #f8f9fa;
+    border: none;
+    cursor: default;
+}
+
+/* Unavailable days */
+.calendar-day.unavailable {
+    background-color: #dc3545;
+    color: white;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+/* Fully booked days */
+.calendar-day.full {
+    background-color: #ffc107;
+    cursor: not-allowed;
+}
+
+/* Day number styling */
+.day-number {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Available slots indicator */
+.slots-left {
+    font-size: 0.85em;
+    color: #28a745;
+    margin-top: 5px;
+    padding: 2px 5px;
+    background-color: rgba(40, 167, 69, 0.1);
+    border-radius: 3px;
+    text-align: center;
+}
+
+/* Calendar navigation buttons */
+.calendar-navigation {
+    margin-bottom: 30px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .calendar-month {
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .calendar-day {
+        min-height: 80px;
+        padding: 10px;
+    }
+
+    .day-number {
+        font-size: 1em;
+    }
+
+    .slots-left {
+        font-size: 0.75em;
+    }
+}
