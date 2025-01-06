@@ -12,9 +12,11 @@ session_start();
     <title>Index</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm bg-dark">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="nav-head container-fluid">
-            <a href="#" class="navbar-brand"><img class="logo" src="imgs/MR.FREDDIE.png" alt="Logo"> MR.FREDDIE</a>
+            <a href="#" class="navbar-brand">
+                <img class="logo" src="imgs/MR.FREDDIE.png" alt="Logo"> MR.FREDDIE
+            </a>
         </div>
     </nav>
 </body>
