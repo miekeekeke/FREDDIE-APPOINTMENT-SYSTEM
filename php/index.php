@@ -12,7 +12,7 @@ session_start();
     <title>Index</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
         <div class="nav-head container-fluid">
             <a href="#" class="navbar-brand">
                 <img class="logo" src="imgs/MR.FREDDIE.png" alt="Logo"> MR.FREDDIE
