@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e2e3e5;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+form {
+    margin-top: 15px;
+}
