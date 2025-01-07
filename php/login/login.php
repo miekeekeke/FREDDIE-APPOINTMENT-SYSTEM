@@ -1,5 +1,5 @@
 <?php
-require 'conn.php';
+require '../conn.php';
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <button type="submit" class="btn btn-primary">Login</button>
         </form>
         <p class="mt-3 text-center">
-            Don’t have an account? <a href="register_customer.php">Register here</a>
+            Don’t have an account? <a href="../registration/register_customer.php">Register here</a>
         </p>
     </div>
 </body>

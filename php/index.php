@@ -18,7 +18,7 @@ session_start();
             <a href="#" class="navbar-brand">
                 <img class="logo" src="../imgs/MR.FREDDIE.png" alt="Logo"> MR.FREDDIE
             </a>
-            <a href="register.php" class="btn btn-register">Register</a>
+            <a href="register_customer.php" class="btn btn-register">Register</a>
         </div>
     </nav>
     <div class="container">
