@@ -51,7 +51,7 @@ require_once 'db_connect.php';
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.php">
-                <img src="mr-freddie-logo" alt="MR.FREDDIE Logo" class="me-2">
+                <img src="assets/images/mr-freddie.png" alt="MR.FREDDIE Logo" class="me-2">
                 <span>MR.FREDDIE</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -78,7 +78,7 @@ require_once 'db_connect.php';
                                 </li>
                             <?php else: ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="book_appointment.php">Book Appointment</a>
+                                    <a class="nav-link" href="customer/dashboard.php">Customer Dashboard</a>
                                 </li>
                             <?php endif; ?>
                         <?php endif; ?>

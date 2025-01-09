@@ -1,5 +1,5 @@
 <?php
-require_once '../includes/header.php';
+require_once '../includes/dashboard_header.php';
 
 if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] !== 'staff') {
     header('Location: ../login.php');
@@ -38,39 +38,45 @@ $stmt->execute([$staff_id]);
 $bookings = $stmt->fetchAll();
 ?>
 
-<h2 class="text-center mb-4">Booking Summary</h2>
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+            <div class="position-sticky pt-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.php">
+                            <i class="bi bi-house-door"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="manage_appointments.php">
+                            <i class="bi bi-calendar-check"></i> Manage Appointments
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="booking_summary.php">
+                            <i class="bi bi-file-text"></i> Booking Summary
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-<div class="mb-3">
-    <form method="get" action="" class="d-inline">
-        <select name="filter" onchange="this.form.submit()" class="form-select">
-            <option value="today" <?php echo $filter == 'today' ? 'selected' : ''; ?>>Today</option>
-            <option value="this_week" <?php echo $filter == 'this_week' ? 'selected' : ''; ?>>This Week</option>
-            <option value="this_month" <?php echo $filter == 'this_month' ? 'selected' : ''; ?>>This Month</option>
-            <option value="this_year" <?php echo $filter == 'this_year' ? 'selected' : ''; ?>>This Year</option>
-        </select>
-    </form>
-</div>
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Booking Summary</h1>
+            </div>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Date</th>
-            <th>Customer</th>
-            <th>Service</th>
-            <th>Status</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php foreach ($bookings as $booking): ?>
-            <tr>
-                <td><?php echo htmlspecialchars($booking['appointment_date']); ?></td>
-                <td><?php echo htmlspecialchars($booking['first_name'] . ' ' . $booking['last_name']); ?></td>
-                <td><?php echo htmlspecialchars($booking['service']); ?></td>
-                <td><?php echo htmlspecialchars($booking['status']); ?></td>
-            </tr>
-        <?php endforeach; ?>
-    </tbody>
-</table>
+            <div class="mb-3">
+                <form method="get" action="" class="d-inline">
+                    <select name="filter" onchange="this.form.submit()" class="form-select">
+                        <option value="today" <?php echo $filter == 'today' ? 'selected' : ''; ?>>Today</option>
+                        <option value="this_week" <?php echo $filter == 'this_week' ? 'selected' : ''; ?>>This Week</option>
+                        <option value="this_month" <?php echo $filter == 'this_month' ? 'selected' : ''; ?>>This Month</option>
+                        <option value="this_year" <?php echo $filter == 'this_year' ? 'selected' : ''; ?>>This Year</option>
+                    </select>
+                </form>
+            </div>
 
-<?php include '../includes/footer.php'; ?>
+            <div
 

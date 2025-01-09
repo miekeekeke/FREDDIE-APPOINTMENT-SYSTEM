@@ -2,7 +2,7 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-require_once '../includes/db_connect.php';
+require_once 'db_connect.php';
 
 // Redirect if not logged in
 if (!isset($_SESSION['user_id'])) {
@@ -103,7 +103,7 @@ if (!isset($_SESSION['user_id'])) {
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="dashboard.php">
-                <img src="mr-freddie-logo" alt="MR.FREDDIE Logo" class="me-2">
+                <img src="../assets/images/mr-freddie.png" alt="MR.FREDDIE Logo" class="me-2">
                 <span>MR.FREDDIE</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -112,7 +112,7 @@ if (!isset($_SESSION['user_id'])) {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="profile.php">
+                        <a class="nav-link" href="../profile.php">
                             <i class="bi bi-person-circle"></i> Profile
                         </a>
                     </li>

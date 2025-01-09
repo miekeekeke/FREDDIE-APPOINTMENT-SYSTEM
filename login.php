@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <div class="auth-container">
     <div class="auth-logo">
-        <img src="assets\images\mr-freddie.png" alt="MR.FREDDIE Logo">
+        <img src="/placeholder.svg?height=60&width=60" alt="MR.FREDDIE Logo">
         <h4 class="mt-2">Welcome Back</h4>
     </div>
 
@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
         <button type="submit" class="btn btn-primary w-100">Login</button>
     </form>
-    
+
     <div class="text-center mt-3">
         <p class="mb-0">Don't have an account? <a href="register.php">Sign Up</a></p>
     </div>

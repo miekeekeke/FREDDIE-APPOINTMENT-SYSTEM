@@ -1,5 +1,14 @@
 <?php
-require_once 'includes/auth_header.php';
+require_once '../includes/auth_header.php';
+
+// Only allow registration of admin if there are no existing admins
+$stmt = $pdo->query("SELECT COUNT(*) FROM users WHERE role = 'staff'");
+$admin_count = $stmt->fetchColumn();
+
+if ($admin_count > 0 && (!isset($_SESSION['user_id']) || $_SESSION['user_role'] !== 'staff')) {
+    header('Location: ../login.php');
+    exit;
+}
 
 $error = '';
 
@@ -14,12 +23,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $phone = $_POST['phone'];
 
     try {
-        $stmt = $pdo->prepare("INSERT INTO users (username, password, first_name, middle_name, last_name, age, email, phone_number, role) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'customer')");
+        $stmt = $pdo->prepare("INSERT INTO users (username, password, first_name, middle_name, last_name, age, email, phone_number, role) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'staff')");
         if ($stmt->execute([$username, $password, $first_name, $middle_name, $last_name, $age, $email, $phone])) {
-            $_SESSION['user_id'] = $pdo->lastInsertId();
-            $_SESSION['user_role'] = 'customer';
-            header('Location: customer/dashboard.php');
-            exit;
+            $success_message = "Staff member registered successfully!";
         }
     } catch (PDOException $e) {
         $error = "Username or email already exists";
@@ -30,8 +36,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <div class="auth-container">
     <div class="auth-logo">
         <img src="/placeholder.svg?height=60&width=60" alt="MR.FREDDIE Logo">
-        <h4 class="mt-2">Create Account</h4>
+        <h4 class="mt-2">Register New Staff</h4>
     </div>
+
+    <?php if (isset($success_message)): ?>
+        <div class="alert alert-success"><?php echo $success_message; ?></div>
+    <?php endif; ?>
 
     <?php if ($error): ?>
         <div class="alert alert-danger"><?php echo $error; ?></div>
@@ -70,13 +80,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="password" class="form-label">Password</label>
             <input type="password" class="form-control" id="password" name="password" required>
         </div>
-        <button type="submit" class="btn btn-primary w-100">Register</button>
+        <button type="submit" class="btn btn-primary w-100">Register Staff</button>
     </form>
-
-    <div class="text-center mt-3">
-        <p class="mb-0">Already have an account? <a href="login.php">Log In</a></p>
-    </div>
 </div>
 
-<?php require_once 'includes/footer.php'; ?>
-
+<?php require_once '../includes/footer.php'; ?>
