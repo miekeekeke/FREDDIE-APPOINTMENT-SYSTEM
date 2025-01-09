@@ -23,21 +23,16 @@
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
-                    <img src="/placeholder.svg?height=200&width=300" class="card-img-top" alt="Shoe Repair">
+                    <img src="assets/images/shoe-repair.jpg" class="card-img-top" alt="Shoe Repair">
                     <div class="card-body">
                         <h5 class="card-title">Shoe Repair</h5>
-                        <p class="card-text">Expert repair for all types of<cut_off_point>
-h5>
-                        <p class="card-text">Expert repair for all types of
-</cut_off_point>
-
- footwear, from casual shoes to high-end leather boots.</p>
+                        <p class="card-text">Expert repair for all types of footwear, from casual shoes to high-end leather boots.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
-                    <img src="/placeholder.svg?height=200&width=300" class="card-img-top" alt="Leather Craft">
+                    <img src="assets/images/leather-craft.jpg" class="card-img-top" alt="Leather Craft">
                     <div class="card-body">
                         <h5 class="card-title">Leather Craft</h5>
                         <p class="card-text">Custom leather goods and repairs for bags, wallets, and other accessories.</p>
@@ -46,7 +41,7 @@ h5>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
-                    <img src="/placeholder.svg?height=200&width=300" class="card-img-top" alt="Shoe Shine">
+                    <img src="assets/images/shoe-shine.jpg" class="card-img-top" alt="Shoe Shine">
                     <div class="card-body">
                         <h5 class="card-title">Shoe Shine</h5>
                         <p class="card-text">Professional shoe shining service to keep your footwear looking its best.</p>
@@ -65,24 +60,24 @@ h5>
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
                     <div class="card-body">
-                        <p class="card-text">"MR.FREDDIE brought my favorite boots back to life! Excellent service and craftsmanship."</p>
-                        <p class="font-weight-bold mb-0">- John D.</p>
+                        <p class="card-text">"Solid! Ang akon leather nag plastic."</p>
+                        <p class="font-weight-bold mb-0">- Japeth D.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
                     <div class="card-body">
-                        <p class="card-text">"I'm amazed at how they repaired my leather bag. It looks brand new!"</p>
-                        <p class="font-weight-bold mb-0">- Sarah M.</p>
+                        <p class="card-text">"Bakod mangay-o, indi nako mag balik2 liwat."</p>
+                        <p class="font-weight-bold mb-0">- Anthony A.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
                     <div class="card-body">
-                        <p class="card-text">"Fast, friendly, and professional service. I highly recommend MR.FREDDIE."</p>
-                        <p class="font-weight-bold mb-0">- Michael R.</p>
+                        <p class="card-text">"Dasig ang kay-o! dasig man maguba."</p>
+                        <p class="font-weight-bold mb-0">- Redjay D.</p>
                     </div>
                 </div>
             </div>

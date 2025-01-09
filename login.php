@@ -30,8 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <div class="auth-container">
     <div class="auth-logo">
-        <img src="/placeholder.svg?height=60&width=60" alt="MR.FREDDIE Logo">
-        <h4 class="mt-2">Welcome Back</h4>
+        <img src="assets/images/mr-freddie.png" alt="MR.FREDDIE Logo">
+        <h4 class="mt-2">Welcome back!</h4>
     </div>
 
     <?php if ($error): ?>

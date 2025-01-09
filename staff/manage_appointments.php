@@ -81,6 +81,7 @@ $appointments = $stmt->fetchAll();
                                         <input type="hidden" name="appointment_id" value="<?php echo $appointment['id']; ?>">
                                         <select name="new_status" onchange="this.form.submit()" class="form-select form-select-sm">
                                             <option value="">Update Status</option>
+                                            <option value="on-going">Confirmed</option>
                                             <option value="on-going">On-going</option>
                                             <option value="completed">Completed</option>
                                             <option value="cancelled">Cancelled</option>

@@ -21,11 +21,13 @@ require_once 'db_connect.php';
         
         .navbar {
             background-color: rgba(255, 255, 255, 0.95) !important;
+            height: 76px;
         }
 
         .navbar-brand img {
-            height: 40px;
+            height: 150px;  /* Increased from 40px */
             width: auto;
+            object-fit: contain;
         }
 
         .btn-primary {
@@ -52,7 +54,6 @@ require_once 'db_connect.php';
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.php">
                 <img src="assets/images/mr-freddie.png" alt="MR.FREDDIE Logo" class="me-2">
-                <span>MR.FREDDIE</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -61,10 +62,10 @@ require_once 'db_connect.php';
                 <ul class="navbar-nav ms-auto">
                     <?php if (!isset($_SESSION['user_id'])): ?>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-outline-primary me-2" href="login.php">Log In</a>
+                            <a class="nav-link btn btn-primary text-white" href="login.php">Log In</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-primary text-white" href="register.php">Sign Up</a>
+                            <a class="nav-link btn btn-primary text-white ms-3" href="register.php">Sign Up</a>
                         </li>
                     <?php else: ?>
                         <?php if (isset($_SESSION['user_role'])): ?>
@@ -94,4 +95,3 @@ require_once 'db_connect.php';
         </div>
     </nav>
     <div class="content-wrapper" style="margin-top: 76px;">
-
