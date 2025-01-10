@@ -80,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </form>
 
         <div class="text-center mt-3">
-            <p class="mb-0">Already have an account? <a href="login.php">Log In</a></p>
+            <p class="mb-0">Already have an account?? <a href="login.php">Log In</a></p>
         </div>
     <?php endif; ?>
 </div>
